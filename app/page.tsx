@@ -741,8 +741,6 @@ export default function WeddingInvitation() {
                     <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-pink-100">
                       <h4 className="font-bold text-red-800 mb-2 sm:mb-3 text-center text-sm sm:text-base">Bridesmaids</h4>
                       <div className="text-xs sm:text-sm space-y-1 sm:space-y-2 text-center">
-                        <p className="text-gray-700">Ana Sofia Balonzo</p>
-                        <p className="text-gray-700">Alexcel Bendal</p>
                         <p className="text-gray-700">Nicole Bernal</p>
                         <p className="text-gray-700">Avegail Mora</p>
                         <p className="text-gray-700">Cindy Bibat</p>
@@ -774,11 +772,13 @@ export default function WeddingInvitation() {
 
                       <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-purple-100">
                         <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Veil</h4>
+                        <p className="text-gray-700 text-center">Cate Andrie Lopez</p>
                         <p className="text-gray-700 text-center">Marlon Boncay</p>
                       </div>
 
                       <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-green-100">
                         <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Cord</h4>
+                        <p className="text-gray-700 text-center">Kate Ashly Bernal</p>
                         <p className="text-gray-700 text-center">Roy Escota</p>
                       </div>
                     </div>
@@ -786,8 +786,9 @@ export default function WeddingInvitation() {
                       <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-pink-100">
                         <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Flower Girls</h4>
                         <div className="text-center space-y-1">
-                          <p className="text-gray-700">Cate Andrie Lopez</p>
+                          <p className="text-gray-700">Luna Bibat</p>
                           <p className="text-gray-700">Sofia Datu</p>
+                          <p className="text-gray-700">Ana Sofia Balonzo</p>
                         </div>
                       </div>
 
@@ -805,8 +806,7 @@ export default function WeddingInvitation() {
                       <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-indigo-100">
                         <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Ring Bearer</h4>
                         <div className="text-center space-y-1">
-                          <p className="text-gray-700">Luna Bibat</p>
-                          <p className="text-gray-700">Kate Ashly Bernal</p>
+                          <p className="text-gray-700">Alexcel Bendal</p>
                         </div>
                       </div>
                     </div>
