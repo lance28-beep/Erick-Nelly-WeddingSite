@@ -1003,9 +1003,6 @@ export default function WeddingInvitation() {
                   </div>
 
                   <div className="bg-white rounded-2xl p-6 md:p-8 shadow-inner border border-gray-100">
-                    <h4 className="text-xl md:text-2xl font-bold text-red-900 mb-6 great-vibes-regular">
-                      GCash Payment
-                    </h4>
                     <div className="w-56 h-56 md:w-64 md:h-64 bg-gradient-to-br from-gray-100 to-gray-200 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg border-4 border-white relative overflow-hidden">
                       <Image
                         src="/gcash/gcashQR.png"
