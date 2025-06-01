@@ -12,8 +12,8 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   title: "Eric & Nelly Wedding",
-  description: "Join us for our special day - May 6, 2025. Celebrate the union of Eric and Nelly in a beautiful ceremony filled with love and joy.",
-  keywords: ["wedding", "Eric", "Nelly", "wedding invitation", "May 6 2025", "celebration"],
+  description: "Join us for our special day - May 5, 2025. Celebrate the union of Eric and Nelly in a beautiful ceremony filled with love and joy.",
+  keywords: ["wedding", "Eric", "Nelly", "wedding invitation", "May 5 2025", "celebration"],
   authors: [{ name: "Eric & Nelly" }],
   creator: "Eric & Nelly",
   publisher: "Eric & Nelly",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   manifest: '/favicon_io/site.webmanifest',
   openGraph: {
     title: "Eric & Nelly Wedding",
-    description: "Join us for our special day - May 6, 2025. Celebrate the union of Eric and Nelly in a beautiful ceremony filled with love and joy.",
+    description: "Join us for our special day - May 5, 2025. Celebrate the union of Eric and Nelly in a beautiful ceremony filled with love and joy.",
     type: "website",
     locale: "en_US",
     siteName: "Eric & Nelly Wedding",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Eric & Nelly Wedding",
-    description: "Join us for our special day - May 6, 2025",
+    description: "Join us for our special day - May 5, 2025",
   },
   robots: {
     index: true,
