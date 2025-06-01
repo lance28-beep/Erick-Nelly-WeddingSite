@@ -8,14 +8,23 @@ import { Card, CardContent } from "@/components/ui/card"
 import { GeometricFrame } from "@/components/GeometricFrame"
 
 export default function ShareSection() {
-  const [url, setUrl] = useState('')
+  const [url, setUrl] = useState<string>('')
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     setUrl(window.location.href)
+
+    const handleUrlChange = () => {
+      setUrl(window.location.href)
+    }
+
+    window.addEventListener('popstate', handleUrlChange)
+    return () => window.removeEventListener('popstate', handleUrlChange)
   }, [])
 
   const handleShare = () => {
-    if (navigator.share) {
+    if (typeof window !== 'undefined' && navigator.share) {
       navigator.share({
         title: 'Lance & Rosa Wedding',
         text: 'Join us in celebrating our special day!',
@@ -42,7 +51,7 @@ export default function ShareSection() {
             <Card className="bg-white/10 border-white/20 backdrop-blur-sm shadow-2xl">
               <CardContent className="p-8 md:p-12">
                 <div className="w-48 h-48 md:w-56 md:h-56 bg-white/20 mx-auto mb-6 rounded-2xl flex items-center justify-center shadow-lg border-2 border-white/30">
-                  {url && (
+                  {isClient && (
                     <QRCodeSVG
                       value={url}
                       size={180}

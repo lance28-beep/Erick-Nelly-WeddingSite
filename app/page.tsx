@@ -218,20 +218,20 @@ export default function WeddingInvitation() {
     <div className="min-h-screen bg-gradient-to-b from-amber-50 via-rose-50 to-amber-50">
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg border-b border-red-100">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="flex items-center justify-between h-14 sm:h-16">
             <div className="flex items-center">
-              <Heart className="w-8 h-8 text-red-900 mr-2" />
-              <span className="text-xl font-bold text-red-900 great-vibes-regular">Eric & Nelly</span>
+              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-red-900 mr-1 sm:mr-2" />
+              <span className="text-lg sm:text-xl font-bold text-red-900 great-vibes-regular">Eric & Nelly</span>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="text-red-900 hover:text-red-600 transition-colors duration-200 font-medium"
+                  className="text-red-900 hover:text-red-600 transition-colors duration-200 font-medium text-sm lg:text-base"
                 >
                   {item.label}
                 </button>
@@ -240,19 +240,19 @@ export default function WeddingInvitation() {
 
             {/* Mobile Menu Button */}
             <button className="md:hidden text-red-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
             </button>
           </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
             <div className="md:hidden bg-white border-t border-red-100">
-              <div className="py-4 space-y-2">
+              <div className="py-2 sm:py-4 space-y-1 sm:space-y-2">
                 {navItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => scrollToSection(item.id)}
-                    className="block w-full text-left px-4 py-2 text-red-900 hover:bg-red-50 transition-colors duration-200"
+                    className="block w-full text-left px-3 sm:px-4 py-1.5 sm:py-2 text-sm sm:text-base text-red-900 hover:bg-red-50 transition-colors duration-200"
                   >
                     {item.label}
                   </button>
@@ -266,7 +266,7 @@ export default function WeddingInvitation() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative min-h-[100vh] flex items-center justify-center bg-gradient-to-br from-[#800020] via-[#9B2D30] to-[#800020] text-white overflow-hidden pt-20 pb-8"
+        className="relative min-h-[100vh] flex items-center justify-center bg-gradient-to-br from-[#800020] via-[#9B2D30] to-[#800020] text-white overflow-hidden pt-16 sm:pt-20 pb-8"
         style={{ marginTop: '64px' }}
       >
         {/* Background Overlay */}
@@ -278,14 +278,14 @@ export default function WeddingInvitation() {
           alt="Floral Decoration"
           width={220}
           height={220}
-          className="absolute top-0 right-0 opacity-30 sm:opacity-40 transform rotate-45 scale-50 sm:scale-75 md:scale-100 animate-float"
+          className="absolute top-0 right-0 opacity-20 sm:opacity-30 md:opacity-40 transform rotate-45 scale-40 sm:scale-50 md:scale-75 lg:scale-100 animate-float"
         />
         <Image
           src="/decorations/flower_1.png"
           alt="Floral Decoration"
           width={140}
           height={140}
-          className="absolute bottom-2 left-2 opacity-30 sm:opacity-40 transform -rotate-12 scale-40 sm:scale-60 md:scale-75 animate-float"
+          className="absolute bottom-2 left-2 opacity-20 sm:opacity-30 md:opacity-40 transform -rotate-12 scale-30 sm:scale-40 md:scale-60 lg:scale-75 animate-float"
           style={{ animationDelay: '1.5s' }}
         />
         <Image
@@ -293,106 +293,97 @@ export default function WeddingInvitation() {
           alt="Floral Decoration"
           width={100}
           height={100}
-          className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 sm:opacity-20 scale-30 sm:scale-50 md:scale-75 animate-float"
+          className="absolute top-[60%] left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10 sm:opacity-15 md:opacity-20 scale-20 sm:scale-30 md:scale-50 lg:scale-75 animate-float"
           style={{ animationDelay: '2s' }}
         />
 
-        {/* Enhanced Geometric Frame Background */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-[95%] md:w-[90%] h-[85%] md:h-[80%] max-w-4xl">
-            <div className="absolute inset-0 border-2 border-yellow-400/20 transform rotate-2"></div>
-            <div className="absolute inset-4 border border-yellow-400/15 transform -rotate-1"></div>
-            <div className="absolute inset-8 border border-yellow-400/10 transform rotate-1"></div>
-          </div>
-        </div>
-
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-          <div className="mb-8">
-            <p className="text-yellow-400 text-base md:text-xl mb-6 font-light tracking-[0.3em] uppercase">
+          <div className="mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base md:text-xl mb-4 sm:mb-6 font-light tracking-[0.3em] uppercase">
               The Honor of Your Presence
             </p>
-            <p className="text-yellow-200 text-sm md:text-lg mb-4 font-light">is requested at the marriage of</p>
+            <p className="text-xs sm:text-sm md:text-lg mb-3 sm:mb-4 font-light">is requested at the marriage of</p>
 
-            <div className="relative mb-8">
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4 text-yellow-400 great-vibes-regular drop-shadow-lg">
+            <div className="relative mb-6 sm:mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 text-yellow-400 great-vibes-regular drop-shadow-lg">
                 Eric
               </h1>
-              <div className="text-3xl sm:text-4xl md:text-6xl text-yellow-300 great-vibes-regular mb-4 drop-shadow-lg">&</div>
-              <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-yellow-400 great-vibes-regular drop-shadow-lg">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-yellow-300 great-vibes-regular mb-3 sm:mb-4 drop-shadow-lg">&</div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold mb-4 sm:mb-6 text-yellow-400 great-vibes-regular drop-shadow-lg">
                 Nelly
               </h1>
             </div>
 
-            <div className="space-y-2 text-base md:text-xl mb-8 font-light">
+            <div className="space-y-1 sm:space-y-2 text-sm sm:text-base md:text-xl mb-6 sm:mb-8 font-light">
               <p>Saturday, the sixth of June</p>
               <p>two thousand twenty-five</p>
-              <p className="mt-4">at half past ten in the morning</p>
+              <p className="mt-2 sm:mt-4">at half past ten in the morning</p>
             </div>
 
-            <div className="mb-8">
-              <p className="text-lg md:text-2xl font-light mb-2">Carolyna Hotel</p>
-              <p className="text-base md:text-lg text-yellow-200">San Roque, Tabaco City</p>
+            <div className="mb-6 sm:mb-8">
+              <p className="text-base sm:text-lg md:text-2xl font-light mb-1 sm:mb-2">Carolyna Hotel</p>
+              <p className="text-sm sm:text-base md:text-lg text-yellow-200">San Roque, Tabaco City</p>
             </div>
           </div>
 
           {/* Enhanced Countdown Timer */}
-          <div className="mb-12 mt-6 sm:mt-8">
-            <h3 className="text-lg md:text-2xl font-light mb-6 text-yellow-200 great-vibes-regular">
+          <div className="mb-8 sm:mb-12 mt-4 sm:mt-6">
+            <h3 className="text-base sm:text-lg md:text-2xl font-light mb-4 sm:mb-6 text-yellow-200 great-vibes-regular">
               Until We Say "I Do"
             </h3>
-            <div className="grid grid-cols-4 gap-2 sm:gap-4 max-w-xs sm:max-w-2xl mx-auto px-1 sm:px-0">
+            <div className="grid grid-cols-4 gap-1 sm:gap-2 md:gap-4 max-w-[280px] sm:max-w-xs md:max-w-2xl mx-auto px-1 sm:px-0">
               {[
                 { value: timeLeft.days, label: "Days" },
                 { value: timeLeft.hours, label: "Hours" },
                 { value: timeLeft.minutes, label: "Minutes" },
                 { value: timeLeft.seconds, label: "Seconds" },
               ].map((item, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm rounded-xl p-2 sm:p-4 md:p-6 border border-yellow-400/30 hover:border-yellow-400/50 transition-all duration-300 hover:scale-105 min-w-[60px] sm:min-w-[80px] mx-0.5"
-                >
-                  <div className="text-lg sm:text-2xl md:text-4xl font-bold text-yellow-400 mb-1">{item.value}</div>
-                  <div className="text-xs sm:text-base text-yellow-200 font-light">{item.label}</div>
-                </div>
-              ))}
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-1.5 sm:p-2 md:p-4 lg:p-6 border border-yellow-400/30 hover:border-yellow-400/50 transition-all duration-300 hover:scale-105 min-w-[50px] sm:min-w-[60px] md:min-w-[80px] mx-0.5"
+              >
+                <div className="text-sm sm:text-lg md:text-2xl lg:text-4xl font-bold text-yellow-400 mb-0.5 sm:mb-1">{item.value}</div>
+                <div className="text-[10px] sm:text-xs md:text-base text-yellow-200 font-light">{item.label}</div>
+              </div>
+            ))}
             </div>
           </div>
 
-          <p className="text-xl md:text-3xl great-vibes-regular text-yellow-300">Dancing & dinner follow</p>
+          <p className="text-base sm:text-xl md:text-3xl great-vibes-regular text-yellow-300">Dancing & dinner follow</p>
         </div>
       </section>
 
       {/* Enhanced Love Story */}
       <section
         id="story"
-        className="py-16 md:py-24 bg-gradient-to-br from-red-50 via-rose-50 to-amber-50 relative overflow-hidden"
+        className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-red-50 via-rose-50 to-amber-50 relative overflow-hidden"
       >
-        <FloralDecoration className="top-10 left-10 opacity-40" position="top-left" />
-        <FloralDecoration className="bottom-20 right-10 opacity-40" position="bottom-right" />
+        <FloralDecoration className="top-10 left-10 opacity-30 sm:opacity-40" position="top-left" />
+        <FloralDecoration className="bottom-20 right-10 opacity-30 sm:opacity-40" position="bottom-right" />
         <Image
           src="/decorations/flower_4.png"
           alt="Floral decoration"
           width={200}
           height={200}
-          className="absolute top-0 right-0 w-24 md:w-48 opacity-60 transform -rotate-12"
+          className="absolute top-0 right-0 w-16 sm:w-24 md:w-48 opacity-40 sm:opacity-60 transform -rotate-12"
         />
         <Image
           src="/decorations/flower_4.png"
           alt="Floral decoration"
           width={200}
           height={200}
-          className="absolute bottom-0 left-0 w-20 md:w-40 opacity-40 transform rotate-45"
+          className="absolute bottom-0 left-0 w-14 sm:w-20 md:w-40 opacity-30 sm:opacity-40 transform rotate-45"
         />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-red-900 mb-4 great-vibes-regular">Our Love Story</h2>
-            <p className="text-xl md:text-2xl text-red-700 mb-4 font-light italic">From Strangers to Soulmates</p>
-            <div className="w-24 h-1 bg-gradient-to-r from-red-200 via-red-400 to-red-200 mx-auto rounded-full"></div>
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-red-900 mb-3 sm:mb-4 great-vibes-regular">Our Love Story</h2>
+            <p className="text-lg sm:text-xl md:text-2xl text-red-700 mb-3 sm:mb-4 font-light italic">From Strangers to Soulmates</p>
+            <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-red-200 via-red-400 to-red-200 mx-auto rounded-full"></div>
           </div>
 
           {/* Enhanced Couple Images Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 md:gap-6 mb-8 sm:mb-12 max-w-4xl mx-auto">
             {[1, 2, 4].map((num) => (
               <div 
                 key={num} 
@@ -414,20 +405,20 @@ export default function WeddingInvitation() {
           <div className="max-w-5xl mx-auto">
             <GeometricFrame>
               <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm">
-                <CardContent className="p-4 md:p-16 relative">
-                  <div className="absolute top-4 md:top-8 left-4 md:left-8 text-4xl md:text-6xl text-rose-200 great-vibes-regular">"</div>
-                  <div className="absolute bottom-4 md:bottom-8 right-4 md:right-8 text-4xl md:text-6xl text-rose-200 great-vibes-regular rotate-180">
+                <CardContent className="p-4 sm:p-6 md:p-8 lg:p-16 relative">
+                  <div className="absolute top-2 sm:top-4 md:top-8 left-2 sm:left-4 md:left-8 text-2xl sm:text-4xl md:text-6xl text-rose-200 great-vibes-regular">"</div>
+                  <div className="absolute bottom-2 sm:bottom-4 md:bottom-8 right-2 sm:right-4 md:right-8 text-2xl sm:text-4xl md:text-6xl text-rose-200 great-vibes-regular rotate-180">
                     "
                   </div>
 
-                  <div className="prose prose-lg md:prose-xl max-w-none text-gray-700 leading-relaxed space-y-4 md:space-y-6">
-                    <p className="text-base md:text-xl font-light first-letter:text-4xl md:first-letter:text-5xl first-letter:font-bold first-letter:text-red-900 first-letter:float-left first-letter:mr-2 first-letter:mt-1">
+                  <div className="prose prose-sm sm:prose-base md:prose-lg lg:prose-xl max-w-none text-gray-700 leading-relaxed space-y-3 sm:space-y-4 md:space-y-6">
+                    <p className="text-sm sm:text-base md:text-xl font-light first-letter:text-2xl sm:first-letter:text-4xl md:first-letter:text-5xl first-letter:font-bold first-letter:text-red-900 first-letter:float-left first-letter:mr-2 first-letter:mt-1">
                       We've crossed paths many times—through high school, college, and even as co-workers at LCC Malls
                       Legazpi. But back then, we were simply strangers in the same crowd—no conversations, no spark,
                       just fleeting glances and silent moments.
                     </p>
 
-                    <p className="text-base md:text-xl font-light">
+                    <p className="text-sm sm:text-base md:text-xl font-light">
                       It wasn't until 2016, while both working abroad, that fate took a gentle turn. Through Facebook,
                       we reconnected. (To this day, we still laugh about who sent the friend request first!) What
                       started as casual kumustahan turned into deep conversations about life, dreams, and everything in
@@ -435,37 +426,37 @@ export default function WeddingInvitation() {
                       heart had been trying to say—and to my joy, she felt the same.
                     </p>
 
-                    <p className="text-base md:text-xl font-light">
+                    <p className="text-sm sm:text-base md:text-xl font-light">
                       We entered a long-distance relationship, me in Bahrain and her in Taiwan. The five-hour time
                       difference and the challenges of LDR eventually wore us down, and after two years, we parted ways.
                       It was a painful goodbye, but destiny had other plans.
                     </p>
 
-                    <p className="text-base md:text-xl font-light">
+                    <p className="text-sm sm:text-base md:text-xl font-light">
                       In November 2023, during her vacation to the Philippines, I made a bold decision—without telling
                       her, I booked a flight home. I went straight to her hometown in Tanglad, Hamorawon, and attended
                       her mother's birthday. After so many years apart, seeing her again face to face was a moment I'll
                       never forget. Though I didn't win her heart back that day, I knew I couldn't give up.
                     </p>
 
-                    <p className="text-base md:text-xl font-light">
+                    <p className="text-sm sm:text-base md:text-xl font-light">
                       Before her vacation ended, I promised myself—I wouldn't let this love slip away again. I poured my
                       heart out and this time, love found its way back to us.
                     </p>
 
-                    <p className="text-base md:text-xl font-light">
+                    <p className="text-sm sm:text-base md:text-xl font-light">
                       We're once again in a long-distance relationship, but now with deeper commitment, more maturity,
                       and a promise to never let time or distance break us again. We reached out to each other every
                       single day, building not just love, but a life together.
                     </p>
 
-                    <div className="text-center mt-8 md:mt-12 p-4 md:p-8 bg-gradient-to-r from-red-50 to-rose-50 rounded-2xl border border-red-100 relative overflow-hidden">
+                    <div className="text-center mt-6 sm:mt-8 md:mt-12 p-3 sm:p-4 md:p-8 bg-gradient-to-r from-red-50 to-rose-50 rounded-xl sm:rounded-2xl border border-red-100 relative overflow-hidden">
                       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-200 via-red-400 to-red-200"></div>
-                      <p className="text-lg md:text-2xl text-red-900 font-light mb-4">
+                      <p className="text-base sm:text-lg md:text-2xl text-red-900 font-light mb-3 sm:mb-4">
                         Despite all the obstacles we faced, with the support and blessings of her parents and my family,
                         we're now ready to say our vows and finally hear the words we've waited so long for:
                       </p>
-                      <p className="text-2xl md:text-4xl text-yellow-600 font-bold great-vibes-regular">"I do."</p>
+                      <p className="text-xl sm:text-2xl md:text-4xl text-yellow-600 font-bold great-vibes-regular">"I do."</p>
                       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-red-200 via-red-400 to-red-200"></div>
                     </div>
                   </div>
@@ -477,14 +468,14 @@ export default function WeddingInvitation() {
       </section>
 
       {/* Enhanced Wedding Timeline */}
-      <section id="timeline" className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <section id="timeline" className="py-12 sm:py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-rose-50/30"></div>
-        <FloralDecoration className="top-20 right-20 opacity-30" position="top-right" />
+        <FloralDecoration className="top-20 right-20 opacity-20 sm:opacity-30" position="top-right" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-red-900 mb-4 great-vibes-regular">Wedding Timeline</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-red-900 mb-3 sm:mb-4 great-vibes-regular">Wedding Timeline</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               A perfect day planned with love and attention to every detail
             </p>
           </div>
@@ -492,9 +483,9 @@ export default function WeddingInvitation() {
           <div className="max-w-3xl mx-auto">
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-8 md:left-12 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-400 via-yellow-400 to-red-400"></div>
+              <div className="absolute left-6 sm:left-8 md:left-12 top-0 bottom-0 w-0.5 bg-gradient-to-b from-red-400 via-yellow-400 to-red-400"></div>
 
-              <div className="space-y-12">
+              <div className="space-y-8 sm:space-y-12">
                 {[
                   {
                     time: "10:00 AM",
@@ -532,22 +523,22 @@ export default function WeddingInvitation() {
                     color: "bg-red-600",
                   },
                 ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-6 md:gap-8 relative">
+                  <div key={index} className="flex items-start gap-4 sm:gap-6 md:gap-8 relative">
                     <div
-                      className={`flex-shrink-0 w-16 h-16 md:w-20 md:h-20 ${item.color} rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 relative z-10`}
+                      className={`flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 ${item.color} rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 relative z-10`}
                     >
-                      <item.icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                      <item.icon className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
                     </div>
                     <GeometricFrame className="flex-1">
                       <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white/90 backdrop-blur-sm">
-                        <CardContent className="p-6 md:p-8">
-                          <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                            <h3 className="text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
+                        <CardContent className="p-4 sm:p-6 md:p-8">
+                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
                               {item.event}
                             </h3>
-                            <span className="text-lg md:text-xl font-bold text-yellow-600">{item.time}</span>
+                            <span className="text-base sm:text-lg md:text-xl font-bold text-yellow-600">{item.time}</span>
                           </div>
-                          <p className="text-gray-600 font-light">{item.description}</p>
+                          <p className="text-sm sm:text-base text-gray-600 font-light">{item.description}</p>
                         </CardContent>
                       </Card>
                     </GeometricFrame>
@@ -560,55 +551,55 @@ export default function WeddingInvitation() {
       </section>
 
       {/* Enhanced Dress Code */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-red-50 via-rose-50 to-amber-50 relative overflow-hidden">
-        <FloralDecoration className="top-10 left-10 opacity-40" position="top-left" />
+      <section className="py-12 sm:py-16 md:py-24 bg-gradient-to-br from-red-50 via-rose-50 to-amber-50 relative overflow-hidden">
+        <FloralDecoration className="top-10 left-10 opacity-30 sm:opacity-40" position="top-left" />
 
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-red-900 mb-4 great-vibes-regular">Dress Code</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Help us create a beautiful, cohesive celebration</p>
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-red-900 mb-3 sm:mb-4 great-vibes-regular">Dress Code</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">Help us create a beautiful, cohesive celebration</p>
           </div>
 
           <GeometricFrame className="max-w-3xl mx-auto">
             <Card className="border-0 shadow-2xl bg-white/95 backdrop-blur-sm">
-              <CardContent className="p-8 md:p-12 text-center">
-                <div className="mb-8">
-                  <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+              <CardContent className="p-4 sm:p-6 md:p-8 lg:p-12 text-center">
+                <div className="mb-6 sm:mb-8">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6">
                     We kindly encourage our guests to wear{" "}
                     <strong className="text-red-900">formal/semi-formal attire</strong> with these beautiful colors on
                     our special day.
                   </p>
 
-                  <div className="flex justify-center gap-6 md:gap-8 mb-8">
+                  <div className="flex justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-6 sm:mb-8">
                     <div className="text-center group">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-red-900 rounded-full border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-3"></div>
-                      <p className="text-sm md:text-base font-semibold text-red-900">Burgundy</p>
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-red-900 rounded-full border-2 sm:border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-2 sm:mb-3"></div>
+                      <p className="text-xs sm:text-sm md:text-base font-semibold text-red-900">Burgundy</p>
                     </div>
                     <div className="text-center group">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-yellow-500 rounded-full border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-3"></div>
-                      <p className="text-sm md:text-base font-semibold text-yellow-700">Gold</p>
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-yellow-500 rounded-full border-2 sm:border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-2 sm:mb-3"></div>
+                      <p className="text-xs sm:text-sm md:text-base font-semibold text-yellow-700">Gold</p>
                     </div>
                     <div className="text-center group">
-                      <div className="w-16 h-16 md:w-20 md:h-20 bg-rose-600 rounded-full border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-3"></div>
-                      <p className="text-sm md:text-base font-semibold text-rose-700">Rose</p>
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-rose-600 rounded-full border-2 sm:border-4 border-white shadow-xl group-hover:scale-110 transition-transform duration-300 mb-2 sm:mb-3"></div>
+                      <p className="text-xs sm:text-sm md:text-base font-semibold text-rose-700">Rose</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-2xl p-6 md:p-8 border border-red-100">
-                  <h3 className="text-xl font-bold text-red-900 mb-4 great-vibes-regular">Style Guidelines</h3>
+                <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 border border-red-100">
+                  <h3 className="text-lg sm:text-xl font-bold text-red-900 mb-3 sm:mb-4 great-vibes-regular">Style Guidelines</h3>
                   <div className="grid md:grid-cols-2 gap-4 text-left">
                     <div>
-                      <h4 className="font-semibold text-red-800 mb-2">For Ladies:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <h4 className="font-semibold text-red-800 mb-1 sm:mb-2">For Ladies:</h4>
+                      <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                         <li>• Elegant dresses or formal separates</li>
                         <li>• Midi to floor-length preferred</li>
                         <li>• Comfortable heels for dancing</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-red-800 mb-2">For Gentlemen:</h4>
-                      <ul className="text-sm text-gray-600 space-y-1">
+                      <h4 className="font-semibold text-red-800 mb-1 sm:mb-2">For Gentlemen:</h4>
+                      <ul className="text-xs sm:text-sm text-gray-600 space-y-1">
                         <li>• Suit or dress shirt with slacks</li>
                         <li>• Tie or bow tie encouraged</li>
                         <li>• Dress shoes recommended</li>
@@ -623,42 +614,42 @@ export default function WeddingInvitation() {
       </section>
 
       {/* Enhanced Wedding Entourage */}
-      <section id="entourage" className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <section id="entourage" className="py-12 sm:py-16 md:py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-rose-50/30"></div>
-        <FloralDecoration className="bottom-20 right-20 opacity-30" position="bottom-right" />
+        <FloralDecoration className="bottom-20 right-20 opacity-20 sm:opacity-30" position="bottom-right" />
 
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl font-bold text-red-900 mb-4 great-vibes-regular">Wedding Entourage</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-red-900 mb-3 sm:mb-4 great-vibes-regular">Wedding Entourage</h2>
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
               The special people who will stand with us on our big day
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
             {/* Parents */}
             <GeometricFrame>
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm h-full">
-                <CardContent className="p-6 md:p-8">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <Heart className="w-8 h-8 text-white" />
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                      <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">Parents</h3>
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">Parents</h3>
                   </div>
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-xl p-4 md:p-6 border border-red-100">
-                      <h4 className="font-bold text-red-800 mb-3 text-center">Parents of the Groom</h4>
+                  <div className="space-y-4 sm:space-y-6">
+                    <div className="bg-gradient-to-r from-red-50 to-rose-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-red-100">
+                      <h4 className="font-bold text-red-800 mb-2 sm:mb-3 text-center text-sm sm:text-base">Parents of the Groom</h4>
                       <div className="text-center space-y-1">
-                        <p className="text-gray-700 font-medium">Anatolio Bibon</p>
-                        <p className="text-gray-700 font-medium">Juliana Bibon</p>
+                        <p className="text-sm sm:text-base text-gray-700 font-medium">Anatolio Bibon</p>
+                        <p className="text-sm sm:text-base text-gray-700 font-medium">Juliana Bibon</p>
                       </div>
                     </div>
-                    <div className="bg-gradient-to-r from-rose-50 to-red-50 rounded-xl p-4 md:p-6 border border-rose-100">
-                      <h4 className="font-bold text-red-800 mb-3 text-center">Parents of the Bride</h4>
+                    <div className="bg-gradient-to-r from-rose-50 to-red-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-rose-100">
+                      <h4 className="font-bold text-red-800 mb-2 sm:mb-3 text-center text-sm sm:text-base">Parents of the Bride</h4>
                       <div className="text-center space-y-1">
-                        <p className="text-gray-700 font-medium">Ulpiano Bernal</p>
-                        <p className="text-gray-700 font-medium">Erlinia Bernal</p>
+                        <p className="text-sm sm:text-base text-gray-700 font-medium">Ulpiano Bernal</p>
+                        <p className="text-sm sm:text-base text-gray-700 font-medium">Erlinia Bernal</p>
                       </div>
                     </div>
                   </div>
@@ -669,17 +660,17 @@ export default function WeddingInvitation() {
             {/* Principal Sponsors */}
             <GeometricFrame>
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm h-full">
-                <CardContent className="p-6 md:p-8">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <Crown className="w-8 h-8 text-white" />
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                      <Crown className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
                       Principal Sponsors
                     </h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm">
-                    <div className="space-y-2">
+                  <div className="grid md:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
+                    <div className="space-y-1 sm:space-y-2">
                       <p className="text-gray-700">Mrs. Rosa Boncay</p>
                       <p className="text-gray-700">Mrs. Benita Bergonio Groth</p>
                       <p className="text-gray-700">Mrs. Margie Conor</p>
@@ -687,7 +678,7 @@ export default function WeddingInvitation() {
                       <p className="text-gray-700">Mrs. Imelda Bermas</p>
                       <p className="text-gray-700">Mrs. Lilia B. Buama</p>
                     </div>
-                    <div className="space-y-2">
+                    <div className="space-y-1 sm:space-y-2">
                       <p className="text-gray-700">Mr. Juan Boncay</p>
                       <p className="text-gray-700">Mr. Noel Bunao</p>
                       <p className="text-gray-700">Mr. Adrian Borlado</p>
@@ -703,23 +694,23 @@ export default function WeddingInvitation() {
             {/* Best Man & Maid of Honor */}
             <GeometricFrame>
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm h-full">
-                <CardContent className="p-6 md:p-8">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <Sparkles className="w-8 h-8 text-white" />
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-rose-500 to-rose-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                      <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
                       Best Man & Maid of Honor
                     </h3>
                   </div>
-                  <div className="space-y-6">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 md:p-6 border border-blue-100">
-                      <h4 className="font-bold text-red-800 mb-2 text-center">Best Man</h4>
-                      <p className="text-gray-700 font-medium text-center">Iron Bibon</p>
+                  <div className="space-y-4 sm:space-y-6">
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-blue-100">
+                      <h4 className="font-bold text-red-800 mb-2 sm:mb-2 text-center text-sm sm:text-base">Best Man</h4>
+                      <p className="text-sm sm:text-base text-gray-700 font-medium text-center">Iron Bibon</p>
                     </div>
-                    <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl p-4 md:p-6 border border-pink-100">
-                      <h4 className="font-bold text-red-800 mb-2 text-center">Maid of Honor</h4>
-                      <p className="text-gray-700 font-medium text-center">Shyren G. Bernal</p>
+                    <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-pink-100">
+                      <h4 className="font-bold text-red-800 mb-2 sm:mb-2 text-center text-sm sm:text-base">Maid of Honor</h4>
+                      <p className="text-sm sm:text-base text-gray-700 font-medium text-center">Shyren G. Bernal</p>
                     </div>
                   </div>
                 </CardContent>
@@ -729,27 +720,27 @@ export default function WeddingInvitation() {
             {/* Groomsmen & Bridesmaids */}
             <GeometricFrame>
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm h-full">
-                <CardContent className="p-6 md:p-8">
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <Users className="w-8 h-8 text-white" />
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <div className="text-center mb-4 sm:mb-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                      <Users className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
                       Groomsmen & Bridesmaids
                     </h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 md:p-6 border border-blue-100">
-                      <h4 className="font-bold text-red-800 mb-3 text-center">Groomsmen</h4>
-                      <div className="text-sm space-y-2 text-center">
+                  <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-blue-100">
+                      <h4 className="font-bold text-red-800 mb-2 sm:mb-3 text-center text-sm sm:text-base">Groomsmen</h4>
+                      <div className="text-xs sm:text-sm space-y-1 sm:space-y-2 text-center">
                         <p className="text-gray-700">Ej Broqueza</p>
                         <p className="text-gray-700">Lance Vergil Basallote</p>
                         <p className="text-gray-700">Justine Dave Bibon</p>
                       </div>
                     </div>
-                    <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl p-4 md:p-6 border border-pink-100">
-                      <h4 className="font-bold text-red-800 mb-3 text-center">Bridesmaids</h4>
-                      <div className="text-sm space-y-2 text-center">
+                    <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg sm:rounded-xl p-3 sm:p-4 md:p-6 border border-pink-100">
+                      <h4 className="font-bold text-red-800 mb-2 sm:mb-3 text-center text-sm sm:text-base">Bridesmaids</h4>
+                      <div className="text-xs sm:text-sm space-y-1 sm:space-y-2 text-center">
                         <p className="text-gray-700">Ana Sofia Balonzo</p>
                         <p className="text-gray-700">Alexcel Bendal</p>
                         <p className="text-gray-700">Nicole Bernal</p>
@@ -765,54 +756,54 @@ export default function WeddingInvitation() {
             {/* Secondary Sponsors */}
             <GeometricFrame className="lg:col-span-2">
               <Card className="border-0 shadow-xl hover:shadow-2xl transition-all duration-300 bg-white/95 backdrop-blur-sm">
-                <CardContent className="p-6 md:p-8">
-                  <div className="text-center mb-8">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                      <Heart className="w-8 h-8 text-white" />
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                      <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-red-900 great-vibes-regular">
                       Secondary Sponsors
                     </h3>
                   </div>
-                  <div className="grid md:grid-cols-3 gap-6 text-sm">
-                    <div className="space-y-4">
-                      <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl p-4 border border-yellow-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Candle</h4>
+                  <div className="grid md:grid-cols-3 gap-4 sm:gap-6 text-xs sm:text-sm">
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-yellow-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Candle</h4>
                         <p className="text-gray-700 text-center">Grig Vargas and Erica Diaz</p>
                       </div>
 
-                      <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-xl p-4 border border-purple-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Veil</h4>
+                      <div className="bg-gradient-to-r from-purple-50 to-violet-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-purple-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Veil</h4>
                         <p className="text-gray-700 text-center">Marlon Boncay</p>
                       </div>
 
-                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-4 border border-green-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Cord</h4>
+                      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-green-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Cord</h4>
                         <p className="text-gray-700 text-center">Roy Escota</p>
                       </div>
                     </div>
-                    <div className="space-y-4">
-                      <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-xl p-4 border border-pink-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Flower Girls</h4>
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-pink-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Flower Girls</h4>
                         <div className="text-center space-y-1">
                           <p className="text-gray-700">Cate Andrie Lopez</p>
                           <p className="text-gray-700">Sofia Datu</p>
                         </div>
                       </div>
 
-                      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Bible Bearer</h4>
+                      <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-blue-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Bible Bearer</h4>
                         <p className="text-gray-700 text-center">Matthew Biron</p>
                       </div>
                     </div>
-                    <div className="space-y-4">
-                      <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-4 border border-orange-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Coin Bearer</h4>
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-orange-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Coin Bearer</h4>
                         <p className="text-gray-700 text-center">Sky Diaz</p>
                       </div>
 
-                      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-4 border border-indigo-100">
-                        <h4 className="font-bold text-red-800 mb-2 text-center">Ring Bearer</h4>
+                      <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-indigo-100">
+                        <h4 className="font-bold text-red-800 mb-1 sm:mb-2 text-center text-sm sm:text-base">Ring Bearer</h4>
                         <div className="text-center space-y-1">
                           <p className="text-gray-700">Luna Bibat</p>
                           <p className="text-gray-700">Kate Ashly Bernal</p>
