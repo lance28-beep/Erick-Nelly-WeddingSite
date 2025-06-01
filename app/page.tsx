@@ -48,7 +48,7 @@ export default function WeddingInvitation() {
 
   useEffect(() => {
     // Set the wedding date using local time (not UTC)
-    const weddingDate = new Date(2025, 5, 6, 10, 30, 0) // Months are 0-indexed: 5 = June
+    const weddingDate = new Date(2025, 5, 5, 10, 30, 0) // Months are 0-indexed: 5 = June, 5 = 5th
 
     const timer = setInterval(() => {
       const now = new Date()
@@ -315,7 +315,7 @@ export default function WeddingInvitation() {
             </div>
 
             <div className="space-y-1 sm:space-y-2 text-sm sm:text-base md:text-xl mb-6 sm:mb-8 font-light">
-              <p>Saturday, the sixth of June</p>
+              <p>Saturday, the fifth of June</p>
               <p>two thousand twenty-five</p>
               <p className="mt-2 sm:mt-4">at half past ten in the morning</p>
             </div>
@@ -892,7 +892,7 @@ export default function WeddingInvitation() {
                 },
                 {
                   question: "How do I get to the venue?",
-                  answer: "Carolyna Hotel is located in San Roque, Tabaco City. You can scan our location QR code for detailed directions, or contact us at +639353510431 for specific travel assistance. The venue is approximately 10 minutes from Tabaco City proper.",
+                  answer: "Carolyna Hotel is located in San Roque, Tabaco City. You can scan our location QR code for detailed directions, or contact us for specific travel assistance. The venue is approximately 10 minutes from Tabaco City proper.",
                   icon: MapPin,
                 },
               ].map((faq, index) => (
