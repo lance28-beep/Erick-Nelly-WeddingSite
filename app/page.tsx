@@ -683,7 +683,7 @@ export default function WeddingInvitation() {
                       <p className="text-gray-700">Mr. Noel Bunao</p>
                       <p className="text-gray-700">Mr. Adrian Borlado</p>
                       <p className="text-gray-700">Hon. Capt. Elias Toto Bobiles</p>
-                      <p className="text-gray-700">Mr. Jovito Oriola</p>
+                      <p className="text-gray-700">Mr. Hector Belleza</p>
                       <p className="text-gray-700">Mr. Eduardo B. Buama</p>
                     </div>
                   </div>
