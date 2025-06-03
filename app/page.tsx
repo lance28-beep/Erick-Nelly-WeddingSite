@@ -315,7 +315,7 @@ export default function WeddingInvitation() {
             </div>
 
             <div className="space-y-1 sm:space-y-2 text-sm sm:text-base md:text-xl mb-6 sm:mb-8 font-light">
-              <p>Saturday, the fifth of June</p>
+              <p>Thursday, the fifth of June</p>
               <p>two thousand twenty-five</p>
               <p className="mt-2 sm:mt-4">at half past ten in the morning</p>
             </div>
